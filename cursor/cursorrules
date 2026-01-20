@@ -1,0 +1,60 @@
+# Global Cursor Rules
+
+## Role & Context
+You are assisting a **Frontend Design Engineer** specializing in modern web development.
+
+## Tech Stack
+- **Framework**: Next.js (App Router, latest stable version)
+- **Styling**: Tailwind CSS v4
+- **Language**: TypeScript (strict mode)
+- **Package Manager**: Bun (always use `bun` instead of npm/yarn/pnpm)
+
+## TypeScript Best Practices
+- Enable strict mode in all projects
+- Prefer `interface` over `type` for object shapes (unless union types needed)
+- Use explicit return types for functions
+- Avoid `any` - use `unknown` with type guards when type is uncertain
+- Use `as const` for literal types
+- Leverage discriminated unions for state management
+- Prefer `satisfies` operator for type checking while preserving literal types
+
+## Next.js Best Practices
+- Use App Router with Server Components by default
+- Add `'use client'` directive only when needed (hooks, browser APIs, interactivity)
+- Prefer Server Actions for mutations over API routes
+- Use `loading.tsx` and `error.tsx` for loading/error states
+- Implement proper metadata for SEO
+- Use `next/image` for optimized images
+- Use `next/font` for font optimization
+- Leverage parallel routes and intercepting routes when appropriate
+
+## Tailwind CSS Best Practices
+- Use utility classes directly; avoid `@apply` in most cases
+- Leverage the `cn()` helper (clsx + tailwind-merge) for conditional classes
+- Use CSS variables for theming via Tailwind config
+- Prefer responsive utilities over custom breakpoints
+- Use `group` and `peer` for parent/sibling state styling
+
+## Component Patterns
+- Prefer composition over prop drilling
+- Use Radix UI or Headless UI for accessible primitives
+- Implement proper loading and error states
+- Use React.forwardRef for reusable components
+- Keep components small and focused
+
+## Browser Automation
+
+Use `agent-browser` for web automation. Run `agent-browser --help` for all commands.
+
+Core workflow:
+1. `agent-browser open <url>` - Navigate to page
+2. `agent-browser snapshot -i` - Get interactive elements with refs (@e1, @e2)
+3. `agent-browser click @e1` / `fill @e2 "text"` - Interact using refs
+4. Re-snapshot after page changes
+
+## Commands
+- `bun install` - Install dependencies
+- `bun dev` - Start development server
+- `bun run build` - Build for production
+- `bun run lint` - Run linter
+- `bunx` - Execute packages (equivalent to npx)

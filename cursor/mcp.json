@@ -1,0 +1,43 @@
+{
+  "mcpServers": {
+    "gemini-cli": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "gemini-mcp-tool"
+      ]
+    },
+    "Vercel": {
+      "url": "https://mcp.vercel.com",
+      "headers": {}
+    },
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "Sanity": {
+      "type": "http",
+      "url": "https://mcp.sanity.io",
+      "headers": {
+        "Authorization": "Bearer YOUR_SANITY_TOKEN"
+      }
+    },
+    "Figma Desktop": {
+      "url": "http://127.0.0.1:3845/mcp",
+      "headers": {}
+    },
+    "grep": {
+      "url": "https://mcp.grep.app"
+    }
+  }
+}

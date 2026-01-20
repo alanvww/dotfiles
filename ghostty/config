@@ -1,0 +1,12 @@
+theme = Dracula+
+font-family = "Hack Nerd Font Mono"
+alpha-blending = native
+background-opacity = 0.8
+background-blur = true
+macos-titlebar-style = tabs
+shell-integration-features = true
+cursor-style = block
+cursor-click-to-move = true
+mouse-hide-while-typing = true
+keybind = shift+enter=text:\n
+shell-integration = zsh
